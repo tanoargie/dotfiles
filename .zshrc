@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/francoserio/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,7 +108,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 # Add clangd to PATH.
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
-export PATH="$PATH:/Users/francoserio/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 # Add python2 path
 export PATH="$(pyenv root)/shims/:$PATH"
@@ -122,13 +122,13 @@ export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/francoserio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/francoserio/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/francoserio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/francoserio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias python=python3
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/*,.git/*}"'
 
-export PATH=/Users/francoserio/.rvm/gems/ruby-3.0.0/bin:/Users/francoserio/.rvm/gems/ruby-3.0.0@global/bin:/Users/francoserio/.rvm/rubies/ruby-3.0.0/bin:/Users/francoserio/Downloads/google-cloud-sdk/bin:/Users/francoserio/.pyenv/versions/2.7.18/bin:/Users/francoserio/.pyenv/shims/:/opt/homebrew/opt/llvm/bin:/Users/francoserio/.nvm/versions/node/v16.10.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/francoserio/.cargo/bin:/Users/francoserio/.rvm/bin:/opt/homebrew/opt/llvm/bin:/Users/francoserio/.cargo/bin:/opt/homebrew/opt/cmake/bin
+export PATH=$HOME/.rvm/gems/ruby-3.0.0/bin:$HOME/.rvm/gems/ruby-3.0.0@global/bin:$HOME/.rvm/rubies/ruby-3.0.0/bin:$HOME/Downloads/google-cloud-sdk/bin:$HOME/.pyenv/versions/2.7.18/bin:$HOME/.pyenv/shims/:/opt/homebrew/opt/llvm/bin:$HOME/.nvm/versions/node/v16.10.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:$HOME/.rvm/bin:/opt/homebrew/opt/llvm/bin:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin
