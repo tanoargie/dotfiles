@@ -16,6 +16,18 @@ print_question() {
     # Print output in yellow
     printf "\e[0;33m  [?] $1\e[0m"
 }
+print_result() {
+    [ $1 -eq 0 ] \
+        && print_success "$2" \
+        || print_error "$2"
+
+    [ "$3" == "true" ] && [ $1 -ne 0 ] \
+        && exit
+}
+execute() {
+    $1 &> /dev/null
+    print_result $? "${2:-$1}"
+}
 ask_for_confirmation() {
     print_question "$1 (y/n) "
     read -n 1
