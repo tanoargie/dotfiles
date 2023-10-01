@@ -100,26 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# Add clangd to PATH.
-export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-# Add python2 path
-export PATH="$(pyenv root)/shims/:$PATH"
-export PATH="$(pyenv root)/versions/2.7.18/bin:$PATH"
-# Add cmake
-export PATH="$PATH:/opt/homebrew/opt/cmake/bin"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export GEM_HOME=$HOME/.gem
-export GEM_PATH=$HOME/.gem
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -127,8 +107,8 @@ if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloa
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-alias python=python3
-
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/*,.git/*}"'
 
-export PATH=$HOME/.rvm/gems/ruby-3.0.0/bin:$HOME/.rvm/gems/ruby-3.0.0@global/bin:$HOME/.rvm/rubies/ruby-3.0.0/bin:$HOME/Downloads/google-cloud-sdk/bin:$HOME/.pyenv/versions/2.7.18/bin:$HOME/.pyenv/shims/:/opt/homebrew/opt/llvm/bin:$HOME/.nvm/versions/node/v16.10.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:$HOME/.rvm/bin:/opt/homebrew/opt/llvm/bin:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin
+export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
