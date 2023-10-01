@@ -33,6 +33,14 @@ ask_for_confirmation() {
     read -n 1
     printf "\n"
 }
+installing_asdf() {
+  echo "Installing asdf prerequisites with Homebrew..."
+  brew install coreutils curl git
+  echo "Installing asdf..."
+  brew install asdf
+  echo "Installing asdf plugins"
+  asdf install
+}
 declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf .tools-versions"
 main() {
 
@@ -65,6 +73,7 @@ main() {
 
     done
 
+    installing_asdf
 }
 
 main
