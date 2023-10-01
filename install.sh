@@ -33,7 +33,7 @@ ask_for_confirmation() {
     read -n 1
     printf "\n"
 }
-declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf"
+declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf .tools-versions"
 main() {
 
     local i=""
