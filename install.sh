@@ -21,7 +21,7 @@ ask_for_confirmation() {
     read -n 1
     printf "\n"
 }
-declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .mkshrc .tmux.conf"
+declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf"
 main() {
 
     local i=""
