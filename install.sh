@@ -38,7 +38,7 @@ installing_asdf() {
   brew install coreutils curl git
   echo "Installing asdf..."
   brew install asdf
-  echo "Installing asdf plugins"
+  echo "Installing asdf plugins..."
   asdf install
 }
 declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf .tools-versions"
