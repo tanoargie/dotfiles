@@ -39,6 +39,8 @@ installing_asdf() {
   echo "Installing asdf..."
   brew install asdf
   echo "Installing asdf plugins..."
+  cut -d' ' -f1 .tool-versions|xargs -I{} asdf plugin add {}
+  echo "Installing asdf versions..."
   asdf install
 }
 FILES_TO_SYMLINK=(".zshrc" ".skhdrc" ".tmux.conf" ".tools-versions")
