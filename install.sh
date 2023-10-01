@@ -41,14 +41,14 @@ installing_asdf() {
   echo "Installing asdf plugins..."
   asdf install
 }
-declare -a FILES_TO_SYMLINK=".zshrc .skhdrc .tmux.conf .tools-versions"
+FILES_TO_SYMLINK=(".zshrc" ".skhdrc" ".tmux.conf" ".tools-versions")
 main() {
 
     local i=""
     local sourceFile=""
     local targetFile=""
 
-    for i in ${FILES_TO_SYMLINK[@]}; do
+    for i in "${FILES_TO_SYMLINK[@]}"; do
 
         sourceFile="$(pwd)/$i"
         targetFile="$HOME/$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
