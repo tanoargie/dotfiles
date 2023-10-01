@@ -109,6 +109,6 @@ if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/D
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/*,.git/*}"'
 
-export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin
+export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin:$HOME/development/flutter/bin
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
