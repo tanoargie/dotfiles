@@ -101,14 +101,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/*,.git/*}"'
 
-export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin:$HOME/development/flutter/bin
+export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin:$HOME/development/flutter/bin:$(go env GOPATH)/bin
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tanoserio/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tanoserio/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tanoserio/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tanoserio/google-cloud-sdk/completion.zsh.inc'; fi
