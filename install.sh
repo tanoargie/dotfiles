@@ -35,7 +35,7 @@ ask_for_confirmation() {
 }
 installing_asdf() {
   echo "Installing asdf prerequisites with Homebrew..."
-  brew install coreutils curl git
+  brew install coreutils curl git reattach-to-user-namespace tmux fzf neovim
   echo "Installing asdf..."
   brew install asdf
   echo "Installing asdf plugins..."
