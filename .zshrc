@@ -103,7 +103,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules/*,.git/*}"'
 
-export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin:$HOME/development/flutter/bin:$(go env GOPATH)/bin
+export PATH=$HOME/Downloads/google-cloud-sdk/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:$HOME/.cargo/bin:/opt/homebrew/opt/cmake/bin:$HOME/development/flutter/bin:$(go env GOPATH)/bin:~/.local/bin
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
