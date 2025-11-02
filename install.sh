@@ -43,6 +43,19 @@ installing_asdf() {
   echo "Installing asdf versions..."
   asdf install
 }
+installing_samtmux() {
+  echo "Installing samtmux..."
+  LOCAL_BIN="$HOME/.local/bin"
+  SCRIPT_NAME="samtmux"
+  
+  # --- Ensure ~/.local/bin exists ---
+  mkdir -p "$LOCAL_BIN"
+  
+  # --- Symlink or copy your script there ---
+  # If your install.sh is in your dotfiles repo, adjust accordingly:
+  ln -sf "$PWD/$SCRIPT_NAME" "$LOCAL_BIN/$SCRIPT_NAME"
+  chmod +x "$LOCAL_BIN/$SCRIPT_NAME"
+}
 FILES_TO_SYMLINK=(".zshrc" ".skhdrc" ".tmux.conf" ".tools-versions")
 main() {
 
@@ -76,6 +89,7 @@ main() {
     done
 
     installing_asdf
+    installing_samtmux
 }
 
 main
